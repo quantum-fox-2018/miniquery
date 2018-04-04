@@ -1,0 +1,36 @@
+<html>
+
+    <head>
+
+    </head>
+    <body>
+        <div id="eyed">eyed</div>
+        <div class="klass">klass</div>
+        <a href="#hello">click me</a>
+        <br><br>
+        <div id="test"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./lib/sweetSelector.js"></script>
+        <script src="./lib/DOM.js"></script>
+        <script src="./lib/createButton.js"></script>
+        <script src="./lib/eventDispatcher.js"></script>
+
+
+        <script>
+            let hideElement = ".klass"
+            let showElement = ".klass"
+            let source = '.klass'
+            let target = 'shadi'
+            SweetSelector.select('#eyed')
+            SweetSelector.select('.klass')
+            SweetSelector.select('a')
+
+            EventDispatcher.on('.klass', 'click', function(){
+                console.log('awesomeeee')
+            })
+            EventDispatcher.trigger('.klass', 'click')
+
+        </script>
+    </body>
+</html>
