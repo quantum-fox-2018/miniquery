@@ -1,0 +1,11 @@
+var onButton = document.createElement("BUTTON");
+var idonBtn = document.createAttribute("id");
+var onText = document.createTextNode("on");
+
+idonBtn.value = "onBtn";
+onButton.appendChild(onText);
+onButton.onAttributeNode(idonBtn);
+
+
+
+document.getElementById("test").appendChild(onButton);
