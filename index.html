@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Query</title>
+    <script src="./lib/miniquery.js"></script>
+  </head>
+  <body>
+    <h1 class="klass">class</h1>
+    <h1 id="eyed">h1</h1>
+    <a href="#hello">Click Me</a>
+
+    <br><br>
+
+    <button onclick="SweetSelector.select('.klass')">Select by class</button>
+    <button onclick="SweetSelector.select('#eyed')">Select by id</button>
+    <button onclick="SweetSelector.select('a')">Select by tag</button>
+    <br>
+    <button onclick="DOM.hide('.klass')">hide by class</button>
+    <button onclick="DOM.hide('#eyed')">hide by id</button>
+    <button onclick="DOM.hide('a')">hide by tag</button>
+    <br>
+    <button onclick="DOM.show('.klass')">show by class</button>
+    <button onclick="DOM.show('#eyed')">show by id</button>
+    <button onclick="DOM.show('a')">show by tag</button>
+    <br>
+    <button onclick="DOM.addClass('.klass', 'kelasBaru')">add class by class</button>
+    <button onclick="DOM.addClass('#eyed', 'kelasBaru')">add class by id</button>
+    <button onclick="DOM.addClass('a', 'kelasBaru')">add class by tag</button>
+    <br>
+    <button onclick="DOM.removeClass('.klass', 'kelasBaru')">remove class by class</button>
+    <button onclick="DOM.removeClass('#eyed', 'kelasBaru')">remove class by id</button>
+    <button onclick="DOM.removeClass('a', 'kelasBaru')">remove class by tag</button>
+  </body>
+</html>
