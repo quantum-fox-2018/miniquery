@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MiniQuery</title>
+  </head>
+  <body>
+    <div id="eyed">
+      eyed
+    </div>
+    <div class="klass">
+      klass
+    </div>
+    <a href="#hello">click me</a>
+    <script src="./lib/miniquery.js"></script>
+    <script type="text/javascript">
+      let eyed = SweetSelector.select('#eyed')
+      console.log(eyed)
+      let klass = SweetSelector.select('.klass')
+      console.log(klass)
+      let a = SweetSelector.select('a')
+      console.log(a)
+    </script>
+  </body>
+</html>
