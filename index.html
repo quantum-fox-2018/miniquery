@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="eyed">eyed</div>
+    <div class="klass">klass</div>
+    <div class="klass">klass</div>
+    <div class="klass">klass</div>
+    <a href="#hello">click me</a>
+
+    <script src="./lib/miniquery.js"></script>
+    <script>
+        // release 0 = selector
+        SweetSelector.select('#eyed')
+        SweetSelector.select('.klass')
+        SweetSelector.select('a')
+
+        // release 1 = manipulation
+        DOM.hide('#eyed')
+        DOM.hide('.klass')
+        DOM.show('#eyed')
+        DOM.show('.klass')
+        DOM.addClass('.klass', 'shadi')
+        DOM.addClass('.klass', 'anes')
+        DOM.removeClass('.klass', 'anes')
+
+        // release 2 = event dispatch
+        EventDispatcher.on('.klass', 'click', function(){
+            console.log('awesome') 
+        })
+        EventDispatcher.trigger('.klass', 'click')
+
+        // release 3 = AJAX
+        AjaxWrapper.request({
+            url: 'file:///home/yohanes/hacktiv8/phase2/week1/day3-rabu/miniquery/index.html',
+            type: 'GET',
+            success: function() {
+                console.log('Success')
+            },
+            fail: function() {
+                console.log('Error')
+            }
+        })
+
+        
+    </script>
+</body>
+</html>
