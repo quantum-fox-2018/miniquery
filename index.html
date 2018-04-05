@@ -11,26 +11,31 @@
         <div id="test"></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./lib/sweetSelector.js"></script>
-        <script src="./lib/DOM.js"></script>
+        <script src="./lib/miniquery.js"></script>
         <script src="./lib/createButton.js"></script>
-        <script src="./lib/eventDispatcher.js"></script>
-
 
         <script>
-            let hideElement = ".klass"
-            let showElement = ".klass"
-            let source = '.klass'
-            let target = 'shadi'
-            SweetSelector.select('#eyed')
-            SweetSelector.select('.klass')
-            SweetSelector.select('a')
 
-            EventDispatcher.on('.klass', 'click', function(){
+            
+            let miniquery = new Miniquery('.klass')
+            miniquery.hide()
+            miniquery.show()
+            miniquery.on('click', function(){
                 console.log('awesomeeee')
             })
-            EventDispatcher.trigger('.klass', 'click')
+            miniquery.trigger('click')
 
+            miniquery.ajax({
+                url: 'http://localhost:3000/',
+                type: 'GET',
+                success: function(resp){
+                    console.log(resp)
+                },
+                fail: function(err){
+                    console.log(err)
+                }
+            })
+            
         </script>
     </body>
 </html>

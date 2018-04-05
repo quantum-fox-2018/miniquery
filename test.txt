@@ -1,11 +1,24 @@
-var onButton = document.createElement("BUTTON");
-var idonBtn = document.createAttribute("id");
-var onText = document.createTextNode("on");
+SweetSelector.select('#eyed')
+            SweetSelector.select('.klass')
+            SweetSelector.select('a')
+             
+DOM.hide(".klass")
+DOM.show(".klass")
+DOM.addClass('.klass', 'shadi')
+DOM.removeClass('.klass', 'shadi')
 
-idonBtn.value = "onBtn";
-onButton.appendChild(onText);
-onButton.onAttributeNode(idonBtn);
+EventDispatcher.on('.klass', 'click', function(){
+    console.log('awesomeeee')
+})
+EventDispatcher.trigger('.klass', 'click')
 
-
-
-document.getElementById("test").appendChild(onButton);
+AjaxWrapper.request({
+    url: 'http://localhost:3000/',
+    type: 'GET',
+    success: function(resp){
+        console.log(resp)
+    },
+    fail: function(err){
+        console.log(err)
+    }
+})
