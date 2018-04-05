@@ -2,16 +2,20 @@
   <head>
   </head>
   <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js">
+    </script>
+    <button class="reqAjax">Request AJAX</button>
+    <span id="reqResponse"></span>
     <script src="./lib/miniquery.js">
     </script>
     <!--<div id="eyed">eyed</div>
     <div class="klass">klass</div>
     <a href="#hello">click me</a><br> -->
     <br>
-    <a href="#" onclick="DOM.show('.klass')">Show div klass</a><br>
-    <a href="#" onclick="DOM.hide('.klass')">Hide div klass</a><br>
-    <a href="#" onclick="DOM.addClass('.klass', 'shadi')">Add Class 'Shadi' into 'klass'</a><br>
-    <a href="#" onclick="DOM.removeClass('.klass', 'shadi')">Remove Class 'Shadi' into 'klass'</a>
+    <button onclick="DOM.show('.klass')">Show div klass</button>
+    <button onclick="DOM.hide('.klass')">Hide div klass</button>
+    <button onclick="DOM.addClass('.klass', 'shadi')">Add Class 'Shadi' into 'klass'</button>
+    <button onclick="DOM.removeClass('.klass', 'shadi')">Remove Class 'Shadi' into 'klass'</button><br><br>
 
     <script>
 
